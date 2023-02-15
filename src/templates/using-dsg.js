@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
 const UsingDSG = () => (
   <Layout>
@@ -16,6 +17,23 @@ const UsingDSG = () => (
         documentation about Deferred Static Generation
       </a>
       .
+    </p>
+    <StaticImage src="../images/example.png" alt="A Gatsby example" />
+    <StaticImage src="../images/example.png" alt="A Gatsby example" />
+    <StaticImage src="../images/example.png" alt="A Gatsby example" />
+    <StaticImage src="../images/example.png" alt="A Gatsby example" />
+    <StaticImage src="../images/example.png" alt="A Gatsby example" />
+    <StaticImage src="../images/example.png" alt="A Gatsby example" />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
+      consectetur nisl, eu ultricies nisl. Nullam euismod, nisl nec ultricies
+      lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl. Nullam
+      euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget aliquam
+      nisl nisl eget nisl. Nullam euismod, nisl nec ultricies lacinia, nisl nisl
+      aliquam nisl, eget aliquam nisl nisl eget nisl. Nullam euismod, nisl nec
+      ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl eget
+      nisl. Nullam euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl,
+      eget aliquam nisl nisl eget nisl. Nullam euismod, nisl nec ultricies
     </p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>

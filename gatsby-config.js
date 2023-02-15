@@ -26,18 +26,34 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-source-wordpress`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        /*
+         * The full URL of the WordPress site's GraphQL API.
+         * Example : 'https://www.example-site.com/graphql'
+         */
+        url: `http://wp.afroditesbeaute.gr/graphql`,
+        schema: {
+          perPage: 50,
+          timeout: 60000,
+        },
       },
+    },
+    {
+      resolve: "@pasdo501/gatsby-source-woocommerce",
+      options: {
+        // Base URL of WordPress site
+        api: 'wp.afroditesbeaute.gr',
+        // true if using https. false otherwise.
+        https: true,
+        api_keys: {
+          consumer_key: process.env.WC_CONSUMER_KEY,
+          consumer_secret: process.env.WC_CONSUMER_SECRET,
+        },
+        // Array of strings with fields you'd like to create nodes for...
+        fields: ['products', 'products/categories', 'coupons'],
+        per_page: 30,
+      }
     },
   ],
 }
